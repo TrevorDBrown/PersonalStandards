@@ -1,7 +1,7 @@
 /*
     ProjectName
     (c)2021 Trevor D. Brown. All rights reserved.
-    Distributed with the MIT license.
+    Distributed under the MIT license.
 
     db.ts - the local database interface for the project.
     Note: this interface uses a query lookup system, to help prevent SQL injection.
