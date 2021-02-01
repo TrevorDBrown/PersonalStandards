@@ -10,9 +10,10 @@ The comments in the file header look as follows (please note: dashes are to dist
 ------------------------------------------------------------------------------------
 ProjectName
 (c)YYYY[-YYYY] Trevor D. Brown. All rights reserved.
-Distributed with the (License Name) license.
+Distributed under the (License Name) license.
 
 filename.ext - a description of the file and what it is used for.
+Additional notes that may be useful.
 
 History: 
 [MM/DD/YYYY] - Trevor D. Brown
