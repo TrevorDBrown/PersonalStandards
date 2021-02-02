@@ -108,7 +108,7 @@ function connectToDatabase (callback: (requestStatus: string, dbConnection: mysq
         port: dbPort,
         user: dbUsername,
         password: dbPassword,
-        database: "KYMENUS"
+        database: "DATABASE"
     });
 
     requestStatus = "Success";

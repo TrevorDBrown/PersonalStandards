@@ -5,9 +5,10 @@ For consistency across projects and implementations, the following format is des
 
 If the language the code file is for supports block comments, a block comment is initiated with the comment text. Otherwise, each line has the standard single line comment character(s).
 
-The comments in the file header look as follows (please note: dashes are to distinguish text, and are not present in actual comments):
+The comments in the file header look as follows:
 
-------------------------------------------------------------------------------------
+```
+-------------------------------------------------------------------------------
 ProjectName
 (c)YYYY[-YYYY] Trevor D. Brown. All rights reserved.
 Distributed under the (License Name) license.
@@ -18,4 +19,5 @@ Additional notes that may be useful.
 History: 
 [MM/DD/YYYY] - Trevor D. Brown
 - Bulleted list (using dashes as bullets) explaining each update to the file.
-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+```
