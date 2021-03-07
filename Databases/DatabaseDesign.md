@@ -6,7 +6,7 @@ Some recent approaches I've taken to table design are:
 ## Common Table Structure
 | Column        | Data Type     | Description/Usage                                                                                          |
 | ------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
-| *_KEY         | INT           | An internal surroage key used for table joins. In some contexts, *_ID is preferred.                        |
+| *_KEY         | INT           | An internal surrogate key used for table joins. In some contexts, *_ID is preferred.                        |
 | *_ID          | INT           | An alias for *_KEY. Used when KEY is considered an important part of the naming scheme to the context of the database. |
 | COL           | ANY           | Generic columns with names based context of database/table.                                                |
 | *_PUBLIC_ID   | VARCHAR(36)   | Generally a GUID/UUID, a value that unique identifies an entity within the context of the system utilizing the database. (i.e. if a database was designed for a restaurant menu, each item in the menu would have a *_PUBLIC_ID, which could be use to reference that specific item. Otherwise, other columns could be referenced, but potentially more ambiguously.) |
@@ -14,7 +14,7 @@ Some recent approaches I've taken to table design are:
 | MODIFIED_DATE | DATE          | Column that indicated when the last modification occurred with a value in a record.                        |
 
 
-While context is important in database design, I've found some common table structures I tend to reimplement in projects constantly:
+While context is important in database design, I've found some common table structures I tend to re-implement in projects constantly:
 
 
 ## *_CATEGORY Table Structure
@@ -22,14 +22,14 @@ The *_CATEGORY tables are tables that store categorical information in relative 
 
 | Column                | Data Type     | Description/Usage                                                                                          |
 | --------------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
-| CATEGORY_KEY          | INT           | An internal surroage key used for joining a category table to a referencing table. In some contexts, *_ID is preferred. |
+| CATEGORY_KEY          | INT           | An internal surrogate key used for joining a category table to a referencing table. In some contexts, *_ID is preferred. |
 | CATEGORY_ID           | INT           | An alias for *_KEY. Used when KEY is considered an important part of the naming scheme to the context of the database. |
 | CATEGORY_NAME         | VARCHAR(64)   | A column which references a specific type of category used in the system.                                  | 
 | CATEGORY_DESCRIPTION  | VARCHAR(1024) | A column which describes the category in more detail. This column may or may not be used for display purposes, depending on the context of the application. |
 
 
-## *_PAIR Table Structure
-The *_PAIR tables are tables where two other related tables are tied, where a one-to-many relationship is required beyond a parent-child relationship. Elements for this table type include:
+## TABLE1_TABLE2_PAIR Table Structure
+The TABLE1_TABLE2_PAIR tables are tables where two other related tables are tied, where a one-to-many relationship is required beyond a parent-child relationship. Elements for this table type include:
 | Column                | Data Type     | Description/Usage                                                                                          |
 | --------------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
 | PAIR_KEY              | INT           | An internal surrogate key used for unique identification of the pair record. Pair tables do not join with other tables, so this key is not used for joins. In some contexts, PAIR_ID is preferred. |
@@ -41,16 +41,16 @@ The *_PAIR tables are tables where two other related tables are tied, where a on
 | CAN_*                 | BOOLEAN       | An action that can or cannot be performed wit the pair (i.e. CAN_READ, CAN_WRITE, CAN_EXECUTE.)            |
 
 
-## *_AUDIT Table Structure
-The *_AUDIT tables are tables that are exact replicas of existing database tables, which are copied to during database operations via a database trigger. These tables include:
+## B_* Table Structure
+The B_* tables, or Backup tables, are tables that are exact replicas of existing database tables, which are copied to during database operations via a database trigger. These tables are designed to show change history, and act as a backup of the source table. These tables include:
 
 | Column                | Data Type     | Description/Usage                                                                                          |
 | --------------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
-| *_AUDIT_KEY           | INT           | An internal surrogate key used for unique identification of the audit record. Audit tables do not join other tables, so this key is not used for joins. In some contexts, *_AUDIT_ID is preferred. |
-| *_AUDIT_ID            | INT           | An alias for *_AUDIT_KEY. Used when KEY is considered an important part of the naming scheme to the context of the database. |
-| *_AUDIT_DATE          | DATE          | The date in which the audit record was captured.                                                           |
-| *_COL_OLD             | ANY           | The column value captured before an operation occurs. Will always be NULL on INSERT, and sometimes on UPDATE/DELETE. |
-| *_COL_NEW             | ANY           | The column value captured after an operation occurs. Will always be NULL on DELETE, and sometimes on INSERT/UPDATE. |
+| B_*_KEY           | INT           | An internal surrogate key used for unique identification of the backup record. Backup tables do not join other tables, so this key is not used for joins. In some contexts, B_*_ID is preferred. |
+| B_*_ID            | INT           | An alias for B_*_KEY. Used when KEY is considered an important part of the naming scheme to the context of the database. |
+| B_*_DATE          | DATE          | The date in which the backup record was captured.                                                           |
+| COL_BEFORE             | ANY           | The column value captured before an operation occurs. Will always be NULL on INSERT, and sometimes on UPDATE/DELETE. |
+| COL_AFTER              | ANY           | The column value captured after an operation occurs. Will always be NULL on DELETE, and sometimes on INSERT/UPDATE. |
 
 
 ## Sequences
