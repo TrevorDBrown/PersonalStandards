@@ -3,7 +3,8 @@ While I don't use Xcode very often, it's still an IDE I install on every Mac I'v
 
 ## Preferred Uses
 I tend to use Xcode when reading and writing files in/on/for the following languages and platforms:
-Objective-C
-Swift
-C/C++
-Apple environments (macOS, iOS)
+- Objective-C
+- Swift
+- C
+- C++
+- Apple environments (macOS, iOS)
