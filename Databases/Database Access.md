@@ -1,5 +1,6 @@
 # Database Access
-Database access control is a problem in software development that is important, and offers a lot of solutions. My personal solution is that of a query dictionary/query processing engine model: 
+
+Database access control is a problem in software development that is important, and offers a lot of solutions. My personal solution is that of a query dictionary/query processing engine model:
 
 - Request for a query is made to the query processing engine for a query, passing in input if needed.
 - The query processing engine looks up the query from the query dictionary (support/db/queries.json).
