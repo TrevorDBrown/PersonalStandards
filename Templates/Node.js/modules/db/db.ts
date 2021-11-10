@@ -9,6 +9,9 @@
     History:
     01/31/2021 - Trevor D. Brown
     - Create template file for PersonalStandards repository (adapted from KYMenus project).
+
+    03/06/2021 - Trevor D. Brown
+    - Restructured files to make Templates directory for code samples.
 */
 
 import * as mysql from 'mysql';

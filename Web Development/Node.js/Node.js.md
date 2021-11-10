@@ -1,7 +1,9 @@
 # Node.js
-For backend web development, I have a huge affinity for Node.js. Although potentially bulky at times, I like the the package system, npm, and the simplicity of including modules and other components into a project. 
+
+For backend web development, I have a huge affinity for Node.js. Although potentially bulky at times, I like the the package system, npm, and the simplicity of including modules and other components into a project.
 
 ## package.json
+
 For every project, I tend to structure my package.json file as such:
 
 ```json
