@@ -4,7 +4,7 @@ While I don't use Xcode very often, it's still an IDE I install on every Mac I'v
 
 ## Preferred Uses
 
-I tend to use Xcode when reading and writing files in/on/for the following languages and platforms:
+I tend to use Xcode when reading and writing files in/on/for the following languages and platform targets:
 
 - Objective-C
 - Swift
