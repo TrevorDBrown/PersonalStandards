@@ -2,13 +2,13 @@
 
 Directories are the primary structure for storing data (behind the file itself). As such, I like to keep consistency in my file structures, depending on the project.
 
-As such, I usually following this common structure:
+As such, I try to follow this common structure:
 
 ```text
 Repository
-├── bin
-│   └── *mirrors src*
-├── src
+├── Build
+│   └── *Add a .gitkeep file. Compiled outputs are to be excluded from commits.*
+├── Source
 │   ├── private
 │   │   └── config.json
 │   ├── support
