@@ -37,3 +37,4 @@ There are some types of comments I place in a special category, usually to indic
 - BUG: a comment indicating where a bug is found to occur.
 - FIX: a comment indicating a potential solution to an issue to be addressed later.
 - TEST: a comment indicating a test that needs to be performed.
+- NOTE: a comment indicating a note that does not fall under the previous types.
